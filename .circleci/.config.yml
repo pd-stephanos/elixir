@@ -1,0 +1,10 @@
+version: 2
+jobs:
+  build:
+    docker:
+      - image: circleci/ubuntu-server:latest
+
+    working_directory: ~/repo
+    steps:
+      - checkout
+      - run: make compile && rm -rf .git && make test
