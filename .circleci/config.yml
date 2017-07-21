@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: alpine:3.5
+      - image: circleci/elixir:latest
 
     working_directory: ~/repo
     steps:
